@@ -27,6 +27,14 @@ massive(connectionString).then( db => {
   app.set('db', db);
 })
 
+// ENDPOINTS
+// ============================================================
+app.get('api/users', function(req, res, next) {
+  req.app.get('db').get_all_users().then( users => {
+    res.status(200).send(users);
+  })
+})
+
 // LISTEN
 // ============================================================
 app.listen(config.serverPort, function() {
