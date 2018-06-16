@@ -1,20 +1,31 @@
 // REQUIRE DEPENDENCIES
 // ============================================================
-var express = require('express');
-var massive = require('massive');
-var config = require('./config');
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const massive = require('massive');
 
-// INITILIZE APP
+// CONFIG
 // ============================================================
-var app = module.exports = express();
+const config = require('./config');
 
-// // INITILIZE DEPENDENCIES
-// // ============================================================
-// app.use(bodyParser.json());
-
-// VARIABLES
+// INITILIZE APP (invoking Express)
 // ============================================================
-var connectionString = config.MASSIVE_URI;
+
+const app = module.exports = express();
+
+app.use(express.static(__dirname + './../dist'));
+app.use(bodyParser.json());
+app.use(cors());
+
+// MASSIVE
+// ============================================================
+
+const connectionString = config.MASSIVE_URI;
+
+massive(connectionString).then( db => {
+  app.set('db', db);
+})
 
 // LISTEN
 // ============================================================
