@@ -5,8 +5,9 @@ Stand Free is a web app which provides access to numerous resources and organiza
 - starting the server $cd ./server $ node index.js
 
 ## Technology
-- PostgreSQL
-- Express
 - Javascript
 - Node.js
-- Massiv.js
+- Express
+- Massive.js
+- PostgreSQL
+
