@@ -1,39 +1,43 @@
 // REQUIRE DEPENDENCIES
 // ============================================================
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const massive = require('massive');
+var express = require('express');
+var cors = require('cors');
+var bodyParser = require('body-parser');
+var massive = require('massive');
 
 // CONFIG
 // ============================================================
-const config = require('./config');
+var config = require('./config');
 
 // INITILIZE APP (invoking Express)
 // ============================================================
 
-const app = module.exports = express();
+var app = module.exports = express();
 
-app.use(express.static(__dirname + './../dist'));
+// app.use(express.static(__dirname + './../dist'));
+app.use(express.static(__dirname + 'public'));
 app.use(bodyParser.json());
 app.use(cors());
 
 // MASSIVE
 // ============================================================
 
-const connectionString = config.MASSIVE_URI;
+var connectionString = config.MASSIVE_URI;
 
 massive(connectionString).then( db => {
   app.set('db', db);
 })
 
-// ENDPOINTS
+// USER ENDPOINTS
 // ============================================================
-app.get('api/users', function(req, res, next) {
+app.get('/survivor-stories', function(req, res, next) {
   req.app.get('db').get_all_users().then( users => {
     res.status(200).send(users);
   })
 })
+// app.get('/', function (req, res) {
+//   res.sendFile(path.join(__dirname,'public', 'index.html'));
+// });
 
 // LISTEN
 // ============================================================
