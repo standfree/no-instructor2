@@ -1,18 +1,18 @@
 // REQUIRE DEPENDENCIES
 // ============================================================
-var express = require('express');
-var cors = require('cors');
-var bodyParser = require('body-parser');
-var massive = require('massive');
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const massive = require('massive');
 
 // CONFIG
 // ============================================================
-var config = require('./config');
+const config = require('./config');
 
 // INITILIZE APP (invoking Express)
 // ============================================================
 
-var app = module.exports = express();
+const app = module.exports = express();
 
 // app.use(express.static(__dirname + './../dist'));
 app.use(express.static(__dirname + 'public'));
@@ -22,7 +22,7 @@ app.use(cors());
 // MASSIVE
 // ============================================================
 
-var connectionString = config.MASSIVE_URI;
+const connectionString = config.MASSIVE_URI;
 
 massive(connectionString).then( db => {
   app.set('db', db);
@@ -37,6 +37,7 @@ app.get('/survivor-stories', function(req, res, next) {
   })
 })
 
+app.get('/', (req, res) => res.send('Hello World!'))
 // LISTEN
 // ============================================================
 app.listen(config.serverPort, function() {
