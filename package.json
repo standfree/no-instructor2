@@ -1,0 +1,30 @@
+{
+  "name": "stand-free2",
+  "version": "1.0.0",
+  "description": "a resource for victims of domestic violence",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/standfree/no-instructor2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/standfree/no-instructor2/issues"
+  },
+  "homepage": "https://github.com/standfree/no-instructor2#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "massive": "^5.0.0",
+    "nodemon": "^1.17.5"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
