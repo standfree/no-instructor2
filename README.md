@@ -1,8 +1,9 @@
 # Stand Free
-Stand Free is a web app which provides access to numerous resources and organizations, which serve to help victims of domestic violence.  At this time, Stand Free is local to Fresno, California.
+Stand Free is a web appplication providing access to numerous resources and organizations, which serve to help victims of domestic violence.  At this time, Stand Free is local to Fresno, California.
 
 ## Working With This Project
-- starting the server $cd ./ $ npm start
+- starting frontend $cd /client $ live-server
+- starting the server $cd / $ nodemon
 
 ## Technology
 - Javascript
@@ -10,4 +11,3 @@ Stand Free is a web app which provides access to numerous resources and organiza
 - Express
 - Massive.js
 - PostgreSQL
-
