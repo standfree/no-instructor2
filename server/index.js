@@ -14,8 +14,8 @@ const config = require('./config');
 
 const app = module.exports = express();
 
-// app.use(express.static(__dirname + './../dist'));
-app.use(express.static(__dirname + 'public'));
+// app.use(express.static(__dirname + 'client'));
+app.use(express.static('client'));
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -30,14 +30,16 @@ massive(connectionString).then( db => {
 
 // USER ENDPOINTS
 // ============================================================
-//app.get('api/users', function(req, res, next) {
-app.get('/survivor-stories', function(req, res, next) {
+// app.get('api/users', function(req, res, next) {
+  
+app.get('/survivor-stories', (req, res, next) => 
   req.app.get('db').get_all_users().then( users => {
     res.status(200).send(users);
   })
-})
+)
 
 app.get('/', (req, res) => res.send('Hello World!'))
+
 // LISTEN
 // ============================================================
 app.listen(config.serverPort, function() {
