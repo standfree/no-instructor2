@@ -1,4 +1,3 @@
-console.log('hello, bo!');
 
 // // const connectionString = '/survivor-stories';
 // // console.log(connectionString);
