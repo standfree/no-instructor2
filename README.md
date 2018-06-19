@@ -3,8 +3,7 @@ Stand Free is a web appplication providing access to numerous resources and orga
 
 ## Working With This Project
 - install node modules $cd / $ npm install
-- starting frontend $cd /client $ live-server
-- starting the server $cd / $ nodemon
+- starting the project $cd / $ nodemon
 
 ## Technology
 - Javascript
