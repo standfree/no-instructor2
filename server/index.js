@@ -33,8 +33,8 @@ massive(connectionString).then( db => {
 // USER ENDPOINTS
 // ============================================================
 // app.get('api/users', function(req, res, next) {
-  
-app.get('/survivor-stories', (req, res, next) => 
+
+app.get('/survivor-stories', (req, res, next) =>
   req.app.get('db').get_all_users().then( users => {
     res.status(200).send(users);
   })
