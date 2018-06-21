@@ -1,0 +1,52 @@
+.container-fluid {
+  background: #fff;
+}
+
+
+.category {
+  justify-content: flex-end;
+  margin-top: 100px;
+}
+
+.category h2 {
+  padding-left: 30px;
+}
+
+.cardcontainer {
+  position: relative;
+  width: 250px;
+  height: 320px;
+  margin: 20px;
+}
+
+.thecard {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.thecard:hover {
+  transform: rotateY(180deg);
+}
+
+.thefront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #ffc728;
+  color: #333;
+  text-align: bottom;
+}
+
+.theback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #40888e;
+  color: #333;
+  transform: rotateY(180deg);
+}
