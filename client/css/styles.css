@@ -52,6 +52,11 @@
   background-image: url('../img/mission.jpg');
   background-size: cover;
   height: 400px;
+}
 
-
+.signs {
+  font-family: 'Raleway', sans-serif;
+  height: 500px;
+  background-color: #E7E1DE;
+  color: #17272F;
 }
