@@ -54,7 +54,10 @@ app.get('/api/survivor-stories', (req, res, next) =>
 );
 
 app.get('/testing123', function(req, res) {
-  res.render(path.join(__dirname, '../client/views', 'test'));
+  res.render(path.join(__dirname, '../client/views', 'test'), 
+  {
+    title: 'omg'
+  });
 });
 
 // LISTEN
