@@ -15,12 +15,16 @@ const config = require('./config');
 // ============================================================
 
 // const app = module.exports = express(); 
+
 const app = express();
+//set up the view engine to ejs
+app.set('view engine', 'ejs');
 // app.use(express.static(__dirname));
 // app.use(express.static(__dirname + 'client'));
 app.use(express.static('client'));
 app.use(bodyParser.json());
 app.use(cors());
+
 
 // MASSIVE
 // ============================================================
@@ -48,6 +52,10 @@ app.get('/api/survivor-stories', (req, res, next) =>
     // res.send(path.join(__dirname, '../client/views', 'survivor-stories.html'));
   })
 );
+
+app.get('/testing123', function(req, res) {
+  res.render(path.join(__dirname, '../client/views', 'test'));
+});
 
 // LISTEN
 // ============================================================
