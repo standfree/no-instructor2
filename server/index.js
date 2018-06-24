@@ -42,9 +42,10 @@ app.get('/resources', function(req, res) {
   res.sendFile(path.join(__dirname, '../client/views', 'resources.html'));
 });
 
-app.get('/survivor-stories', (req, res, next) =>
+app.get('/api/survivor-stories', (req, res, next) =>
   req.app.get('db').get_all_users().then(users => {
     res.status(200).send(users);
+    // res.send(path.join(__dirname, '../client/views', 'survivor-stories.html'));
   })
 );
 
