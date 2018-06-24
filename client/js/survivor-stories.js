@@ -1,14 +1,13 @@
+const xhr = new XMLHttpRequest();
 
-// // const connectionString = '/survivor-stories';
-// // console.log(connectionString);
-// const connectionString = config.MASSIVE_URI;
-// console.log(connectionString);
+xhr.open('GET', 'http://localhost:2000/api/survivor-stories', true);
 
+xhr.onload = function() {
+  if (this.status === 200) {
+  console.log(JSON.parse(this.responseText));
+  } else {
+    console.log('error');
+  }
+}
 
-// const API_URL = connectionString;
-
-// fetch(API_URL)
-//   .then(response => response.json())
-//   .then(users => {
-//     console.log(response);
-//   });
+xhr.send();

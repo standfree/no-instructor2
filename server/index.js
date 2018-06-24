@@ -4,7 +4,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const massive = require('massive');
-// const fetch = require('node-fetch');
 const path = require('path');
 
 // CONFIG
@@ -13,14 +12,8 @@ const config = require('./config');
 
 // INITILIZE APP (invoking Express)
 // ============================================================
-
-// const app = module.exports = express(); 
-
 const app = express();
-//set up the view engine to ejs
-app.set('view engine', 'ejs');
-// app.use(express.static(__dirname));
-// app.use(express.static(__dirname + 'client'));
+
 app.use(express.static('client'));
 app.use(bodyParser.json());
 app.use(cors());
@@ -28,7 +21,6 @@ app.use(cors());
 
 // MASSIVE
 // ============================================================
-
 const connectionString = config.MASSIVE_URI;
 
 massive(connectionString).then(db => {
@@ -46,19 +38,17 @@ app.get('/resources', function(req, res) {
   res.sendFile(path.join(__dirname, '../client/views', 'resources.html'));
 });
 
+app.get('/survivor-stories', function(req, res) {
+  res.sendFile(path.join(__dirname, '../client/views', 'survivor-stories.html'));
+})
+
+// API 
+// ============================================================
 app.get('/api/survivor-stories', (req, res, next) =>
-  req.app.get('db').get_all_users().then(users => {
-    res.status(200).send(users);
-    // res.send(path.join(__dirname, '../client/views', 'survivor-stories.html'));
+  app.get('db').get_all_users().then(users => {
+    res.status(200).json(users);
   })
 );
-
-app.get('/testing123', function(req, res) {
-  res.render(path.join(__dirname, '../client/views', 'test'), 
-  {
-    title: 'omg'
-  });
-});
 
 // LISTEN
 // ============================================================
