@@ -44,9 +44,15 @@ app.get('/survivor-stories', function(req, res) {
 
 // API 
 // ============================================================
+// app.get('/api/survivor-stories', (req, res, next) =>
+//   app.get('db').get_all_stories().then(stories => {
+//     res.status(200).json(stories);
+//   })
+// );
+
 app.get('/api/survivor-stories', (req, res, next) =>
-  app.get('db').get_all_users().then(users => {
-    res.status(200).json(users);
+  app.get('db').get_random_story().then(story => {
+    res.status(200).json(story);
   })
 );
 

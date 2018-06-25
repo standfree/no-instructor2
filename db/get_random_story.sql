@@ -1,0 +1,4 @@
+SELECT story FROM stories
+ORDER BY RANDOM() 
+LIMIT 1;
+
