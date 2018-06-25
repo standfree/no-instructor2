@@ -1,0 +1,3 @@
+SELECT title FROM stories
+ORDER BY RANDOM() 
+LIMIT 3;

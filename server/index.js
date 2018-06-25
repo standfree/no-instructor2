@@ -50,9 +50,15 @@ app.get('/survivor-stories', function(req, res) {
 //   })
 // );
 
+// app.get('/api/survivor-stories', (req, res, next) =>
+//   app.get('db').get_random_story().then(story => {
+//     res.status(200).json(story);
+//   })
+// );
+
 app.get('/api/survivor-stories', (req, res, next) =>
-  app.get('db').get_random_story().then(story => {
-    res.status(200).json(story);
+  app.get('db').get_title().then(title => {
+    res.status(200).json(title);
   })
 );
 
