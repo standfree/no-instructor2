@@ -4,9 +4,20 @@
 /* NAVBAR STYLES START */
 
 .nav {
-  padding-left: 750px;
+  padding-left: 850px;
 }
 
+.media-object {
+  height: 100px;
+  width: 100px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
 .navbar {
   margin-bottom: 0px;
 }
@@ -16,15 +27,36 @@
 }
 
 #intro {
-  background-image: url('../img/hero.jpg');
+  background-image: url('../img/hero2.jpg');
   background-attachment: fixed;
   background-size: cover;
   height: 600px;
-  opacity: 0.3;
-  padding-top: 100px
+  opacity: 0.5;
+  padding-top: 50px;
 }
 
 .stats {
   font-family: 'Raleway', sans-serif;
-  color: #fff;
+  color: #000;
+  padding-bottom: 300px;
+}
+
+.main {
+  font-family: 'Raleway', sans-serif;
+  height: 500px;
+  background-color: #17272F;
+  color: #E7E1DE;
+}
+
+.strong {
+  background-image: url('../img/mission.jpg');
+  background-size: cover;
+  height: 400px;
+}
+
+.signs {
+  font-family: 'Raleway', sans-serif;
+  height: 500px;
+  background-color: #E7E1DE;
+  color: #17272F;
 }
