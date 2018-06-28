@@ -2,21 +2,17 @@
 
 
 /* NAVBAR STYLES START */
-
-.nav {
-  padding-left: 850px;
+.escape {
+  padding-top: 27px;
 }
-
-.media-object {
-  height: 100px;
-  width: 100px;
-  display: table-cell;
-  vertical-align: middle;
+.nav {
+  padding-top: 20px;;
+  padding-left: 600px;
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 .navbar {
   margin-bottom: 0px;
@@ -24,6 +20,10 @@
 
 .container-fluid {
   background-color: #17272F;
+}
+
+.navbar-form {
+  padding-top: 20px;
 }
 
 #intro {
@@ -59,4 +59,28 @@
   height: 500px;
   background-color: #E7E1DE;
   color: #17272F;
+}
+
+.items {
+  font-family: 'Raleway', sans-serif;
+  padding-top: 20px;
+  font-size: 18px;
+}
+/* FOOTER STYLES START */
+.footer {
+  height: 150px;
+  background-color: #17272F;
+}
+
+.fab {
+  padding-top: 40px;
+  padding-left: 10px;
+  font-size: 50px;
+  color: #E7E1DE;
+}
+
+.copyright {
+  font-size: 15px;
+  color: #E7E1DE;
+  font-family: 'Raleway', sans-serif;
 }
