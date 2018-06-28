@@ -4,73 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-	<!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
-	<link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/styles.css">
   <title>Stand Free</title>
 </head>
 <body>
 
   <!-- NAVBAR BEGINS -->
-  <nav class="navbar navbar-default" id="navbar">
-  <div class="container-fluid">
-    <img class="media-object" src="img/sf.png" alt="...">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+      <nav class="navbar navbar-default" id="navbar">
+      <div class="container-fluid">
+        <img class="pull-left logo" src="../img/sf.png" alt="...">
+        <!-- <img class="media-left media-middle" src="../img/sf.png" alt="..."> -->
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+            <li><a href="/survivor-stories">Survivor Stories</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Domestic Violence</a></li>
+                <li><a href="#">Human Trafficking</a></li>
+                <li><a href="#">Substance Abuse</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <div class="escape">
+            <button type="button" class="btn btn-danger">ESCAPE</button>
+          </div>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- START MAIN SECTION -->
+    <div class="col-sm-12" id="intro">
+      <h1 class="text-center stats">On average, nearly 20 people per minute are physically abused by an intimate partner in the United States. During one year, this equates to more than 10 million women and men.</h1>
+    </div>
+    <div class="col-sm-12 main">
+      <h1 class="text-center">MISSION STATEMENT</h1>
+      <div class="col-sm-6 pull-right mission">
+        <p>Lorem ipsum dolor amet viral master cleanse you probably haven't heard of them activated charcoal lyft. Narwhal bushwick cray knausgaard lomo woke, tilde selvage. Tote bag humblebrag man bun affogato iceland lo-fi. Lomo mustache cray thundercats microdosing drinking vinegar cronut glossier butcher tilde lo-fi austin coloring book.
+        Thundercats roof party gluten-free hell of food truck 90's deep v post-ironic williamsburg tacos celiac kinfolk portland edison bulb before they sold out. Trust fund woke kickstarter, food truck occupy beard austin vice brunch drinking vinegar copper mug pinterest readymade. Heirloom gluten-free unicorn biodiesel etsy fashion axe kinfolk, vegan copper mug humblebrag. YOLO asymmetrical cornhole franzen swag waistcoat raclette vinyl pitchfork tumeric tattooed selvage pabst biodiesel. Green juice twee chartreuse, microdosing post-ironic jean shorts cloud bread hammock hexagon biodiesel. Selfies godard ethical etsy, tacos messenger bag prism chia single-origin coffee la croix food truck skateboard af.</p>
+      </div>
+      <div class="col-sm-6 pull-left strong">
+      </div>
+    </div>
+    <div class="col-sm-12 signs">
+      <h1 class="text-center">SIGNS TO LOOK FOR</h1>
+      <div class="col-sm-6 items">
+        <p>1. During normal conversations they make you feel like you don't understand anything, or like you're always wrong.</p>
+        <p>2. When you don't agree with them, you hear things like "you're crazy," that "this is all in your head," or that you're making a big deal out of nothing.</p>
+        <p>3. They think they have the right to control your life and your choices.</p>
+        <p>4. You do things against your will for fear of how they might react if you object. Or they don't respect your wishes when you say "no," even during sex.</p>
+        <p>5. They "never hit you," but you often have bruises they caused, or they use physical force "to calm you down."</p>
+        <p>6. They tell you that no one will ever love you, accept you, or want you besides them.</p>
+      </div>
+      <div class="col-sm-6 items">
+        <p>7. They don't react well to your achievements and the good things that happen in your life.</p>
+        <p>8. They don't like when you talk to other people, especially when they're not there, or they try to make you believe that the only opinion you should listen to is their own.</p>
+        <p>9. They make you feel like you are to blame for their aggression or threats.</p>
+        <p>10. Their actions make you feel weird, or question whether what happened was normal.</p>
+        <p>11. They say that other people shouldn't interfere in a fight between a couple, and that your problems are "a couple's thing."</p>
+        <p>12. They don't harm you, but they express their aggressiveness by slamming on tables, doors, and other objects.</p>
+      </div>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resources <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Domestic Violence</a></li>
-            <li><a href="#">Human Trafficking</a></li>
-            <li><a href="#">Substance Abuse</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+    <!--FOOTER BEGINS -->
+    <div class="col-sm-12 footer text-center">
+      <a href="www.google.com"><i class="fab fa-facebook"></i></a>
+      <a href=""><i class="fab fa-instagram"></i></a>
+      <a href=""><i class="fab fa-twitter-square"></i></a>
+      <div class="text-center copyright">
+        <i class="far fa-copyright"> Stand Free 2018</i>
+      </div>
+    </div>
 
-<!-- START MAIN SECTION -->
-<div class="col-sm-12" id="intro">
-  <h1 class="text-center stats">On average, nearly 20 people per minute are physically abused by an intimate partner in the United States. During one year, this equates to more than 10 million women and men.</h1>
-  <!-- <img class="logo" href="img/sf.png"> -->
-</div>
-<div class="col-sm-12 main">
-  <h1 class="text-center">MISSION STATEMENT</h1>
-  <div class="col-sm-6 pull-right mission">
-    <p>Lorem ipsum dolor amet viral master cleanse you probably haven't heard of them activated charcoal lyft. Narwhal bushwick cray knausgaard lomo woke, tilde selvage. Tote bag humblebrag man bun affogato iceland lo-fi. Lomo mustache cray thundercats microdosing drinking vinegar cronut glossier butcher tilde lo-fi austin coloring book.
-    Thundercats roof party gluten-free hell of food truck 90's deep v post-ironic williamsburg tacos celiac kinfolk portland edison bulb before they sold out. Trust fund woke kickstarter, food truck occupy beard austin vice brunch drinking vinegar copper mug pinterest readymade. Heirloom gluten-free unicorn biodiesel etsy fashion axe kinfolk, vegan copper mug humblebrag. YOLO asymmetrical cornhole franzen swag waistcoat raclette vinyl pitchfork tumeric tattooed selvage pabst biodiesel. Green juice twee chartreuse, microdosing post-ironic jean shorts cloud bread hammock hexagon biodiesel. Selfies godard ethical etsy, tacos messenger bag prism chia single-origin coffee la croix food truck skateboard af.</p>
-  </div>
-  <div class="col-sm-6 pull-left strong">
-  </div>
-</div>
-<div class="col-sm-12 signs">
-  <h1 class"text-center">SIGNS TO LOOK FOR</h1>
-</div>
-<footer> </footer>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="../js/bootstrap.min.js"></script>
-<!-- my scripts --> 
+<!-- my scripts -->
 <script src="../js/survivor-stories.js"></script>
 </body>
 </html>
