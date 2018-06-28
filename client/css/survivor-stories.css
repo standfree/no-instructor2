@@ -1,0 +1,11 @@
+.slide-container {
+  background-color: #65BFB9;
+  height: 80vh;
+  padding: 100px;
+}
+
+.title-style h5{
+  font-family: 'Markazi Text', serif;
+  color: #2f2f2f;
+  font-size: 70px;
+}
