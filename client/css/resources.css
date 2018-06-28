@@ -1,0 +1,83 @@
+.container-fluid {
+  background: #fff;
+}
+
+.blacktext {
+  color: #333;
+}
+
+/* Resource Grid */
+.category {
+  justify-content: flex-end;
+  margin-top: 100px;
+}
+
+.category h2 {
+  padding-left: 30px;
+}
+
+.cardcontainer {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 10px;
+}
+
+.thecard {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.thecard:hover {
+  transform: rotateY(180deg);
+}
+
+.cardfront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: pink;
+  color: #333;
+  text-align: bottom;
+  font-size: 24px;
+  overflow: hidden;
+}
+
+.cardfront h4 {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+}
+
+.fillheight {
+  height: 100%;
+}
+
+.fillwidth {
+
+  width: 100%;
+}
+
+.cardback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #40888e;
+  color: #fff;
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+.cardback ul {
+  list-style-type: none;
+  text-align: left;
+  color: #fff;
+}
+.cardback ul li a {
+  color: #fff;
+}
